@@ -106,6 +106,7 @@ function App() {
             </button>
 
             {/* To */}
+            {/* To */}
             <div className="w-full">
               <label className="block text-sm font-medium text-gray-600 mb-2">
                 To
@@ -116,7 +117,7 @@ function App() {
                   {loading ? (
                     <span className="text-gray-400">Loading...</span>
                   ) : (
-                    convertedAmount.toFixed(2)
+                    convertedAmount.toFixed(5)
                   )}
                 </div>
 
@@ -164,7 +165,7 @@ function App() {
           {!loading && rates[to] && (
             <div className="mt-6 pt-5 border-t border-gray-100 text-center">
               <p className="text-sm text-gray-500">
-                1 {from} = {rates[to]} {to}
+                1 {from} = {rates[to].toFixed(5)} {to}
               </p>
             </div>
           )}
